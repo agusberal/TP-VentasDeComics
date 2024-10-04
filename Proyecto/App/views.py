@@ -27,3 +27,11 @@ def Agregar(request):
         else:
             data['forms']=NuevoComics
     return render (request,'Pages/agregar.html', data)
+
+def verProductos(request):
+    #--->Traemos todos los elementos de la tabla
+    buscar=Comics.objects.all()
+    data={
+        'forms':buscar
+    }
+    return render(request, 'Pages/visualizar.html',data)

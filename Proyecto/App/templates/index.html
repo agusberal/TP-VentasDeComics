@@ -18,7 +18,7 @@
        <a href="{% url 'inicio' %}"><img src="{% static 'img/index/logo.png' %}" alt="Logo" title="Logo" class="logotipo"></a>
         <nav class="menu_selectivo">
             <a href="{% url 'agregar' %}">Agregar</a>
-            <a href="">Visualizar</a>
+            <a href="{% url 'visualizar' %}">Visualizar</a>
             <a href="">Nosotros</a> 
            <a href="" id="contacto_btn">Contacto</a>
            {% if user.is_authenticated %}

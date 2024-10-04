@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+    {% load static %}
+    {% block intermedio %}
+    {% endblock %}
+    {% block cuerpo %}
+    <h1>{{ propiedad.nombre }}</h1>
+    <div class="detalleComics">
+        <img src="{{ Comics.Portada.url }}" alt="Imagen de {{ Comics.Titulo }}" class="img-detalle">
+        <div class="info-propiedad">
+            <p><strong>Titulo:</strong> {{ Comics.Titulo }}</p>
+            <p><strong>Autor:</strong> {{ Comics.Autor }}</p>
+            <p><strong>Editorial:</strong> {{ Comics.Editorial }}</p>
+            <p><strong>Sinopsis:</strong>  {{ Comics.Sinopsis }}</p>
+            <p><strong>Precio:</strong> $ {{ Comics.Precio }}</p>
+            
+            <p><strong>Publicado el:</strong> {{ Comics.fecha_publicacion|date:"d M Y" }}</p>
+        </div>
+    </div>
+    <a href="{% url 'visualizar' %}" class="btn btn-primary">Volver a la lista de propiedades</a>
+    {% endblock %}

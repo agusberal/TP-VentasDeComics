@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+    {% load static %}
+    {% block intermedio %}
+    <img src="{% static 'img/Intermedio/intermedio_visualizar.gif' %}" alt="Carrousel" class="principal_intermedio">
+    {% endblock %}
+    {% block cuerpo %}
+        <div class="contenedor_intermedio">
+            <!-- i-- variable para el conteo 
+             forms -- palanla enviada desde "datos" para traer los datos
+             for -- ciclo repetitivo
+            -->
+             
+            {% for i in forms %}
+            <div class="card" style="width: 18rem;">
+                <img src='{{i.Portada.url}}' class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Titulo: {{i.Titulo}}</h4>
+                  <h5 class="card-title">Autor: {{i.Autor}}</h5>
+                  <p class="card-text">Sinopsis: {{i.Sinopsis}}</p>
+                  <h5 class="card-text">Precio: {{i.Precio}}</h5>
+                  <a href="{% url 'detallesComics' Comics.codigo %}" class="btn btn-primary">Ver Más</a>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    {% endblock %}

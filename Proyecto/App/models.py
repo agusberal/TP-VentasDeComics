@@ -9,6 +9,7 @@ class Comics(models.Model):
     Fecha_Publicacion = models.DateField()
     Portada = models.ImageField(upload_to="Portadas",null=True)
     Sinopsis = models.TextField(blank=True)
+    Precio = models.IntegerField()
   
 
     def __str__(self):
