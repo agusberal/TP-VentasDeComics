@@ -26,7 +26,7 @@ def Agregar(request):
             data['mensaje']= "Datos Registrados"
         else:
             data['forms']=NuevoComics
-    return render (request,'Pages/agregar.html', data)
+    return render (request,'Pages/agregar.html',data)
 
 def verProductos(request):
     #--->Traemos todos los elementos de la tabla

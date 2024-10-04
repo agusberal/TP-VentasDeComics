@@ -12,5 +12,5 @@ class Comics(models.Model):
     Precio = models.IntegerField()
   
 
-    def __str__(self):
+    def __int__(self):
         return self.Codigo
