@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+    {% load static %}
+    {% block intermedio %}
+    <img src="{% static 'img/Intermedio/intermedio_agregar.gif' %}" alt="Carrousel" class="principal_intermedio">
+    {% endblock%}
+    {% block cuerpo %}
+    <div class="agregar_forms">
+        <form action="" method="post" enctype="multipart/form-data">
+                <img src="" alt="">
+                <h1>Complete los datos</h1>
+                {% csrf_token %}
+                {{forms}}
+               
+                <input type="submit" value="Registrar">
+                <a href=""><input type="submit" value="Ver Prodcuto"></a>
+                <p class="maldonado">{{mensaje}}</p>
+        </form>
+    </div>
+
+    {% endblock %}

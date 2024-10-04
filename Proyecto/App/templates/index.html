@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSite</title>
+    <title>ComicsWeb</title>
     <!-- Hoja de Estilos -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Hoja de Estilos de Bootstrap -->
@@ -17,7 +17,7 @@
     <header class="encabezado">
        <a href="{% url 'inicio' %}"><img src="{% static 'img/index/logo.png' %}" alt="Logo" title="Logo" class="logotipo"></a>
         <nav class="menu_selectivo">
-            <a href="">Agregar</a>
+            <a href="{% url 'agregar' %}">Agregar</a>
             <a href="">Visualizar</a>
             <a href="">Nosotros</a> 
            <a href="" id="contacto_btn">Contacto</a>

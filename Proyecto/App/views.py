@@ -14,3 +14,16 @@ def Home(request):
         'forms':buscar
     }
     return render (request,'index.html',data)
+
+def Agregar(request):
+    data={
+        'forms':NuevoComics()
+    }  
+    if request.method=='POST':
+        query = NuevoComics(data=request.POST,files=request.FILES)
+        if query.is_valid():
+            query.save()
+            data['mensaje']= "Datos Registrados"
+        else:
+            data['forms']=NuevoComics
+    return render (request,'Pages/agregar.html', data)
